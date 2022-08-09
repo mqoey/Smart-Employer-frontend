@@ -8,10 +8,18 @@ import { DesignationService } from './services/designation/designation.service';
 import { DepartmentService } from './services/department/department.service';
 import { AttendanceService } from './services/attendance/attendance.service';
 import { EmployeeService } from './services/employee/employee.service';
+import { DepartmentsComponent } from './views/departments/departments.component';
+import { DesignationsComponent } from './views/designations/designations.component';
+import { EmployeesComponent } from './views/employees/employees.component';
+import { AttendancesComponent } from './views/attendances/attendances.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DepartmentsComponent,
+    DesignationsComponent,
+    EmployeesComponent,
+    AttendancesComponent,
   ],
   imports: [
     BrowserModule,
