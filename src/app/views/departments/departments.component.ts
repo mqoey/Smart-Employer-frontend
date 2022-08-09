@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DepartmentService } from 'src/app/services/department/department.service';
 
 @Component({
   selector: 'app-departments',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentsComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  result$: Observable<any>;
+
+  constructor(private departmentService: DepartmentService) {
+    this.result$ = departmentService.resolveDepartments();
+
+
+  }
 
   ngOnInit(): void {
   }
